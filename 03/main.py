@@ -15,20 +15,20 @@ class CustomList(list):
 
     def __add__(self, other: list):
         copy, other = CustomList.one_size(self.copy(), other.copy())
-        for i in range(len(copy)):
-            copy[i] += other[i]
+        for i, elem in enumerate(other):
+            copy[i] += elem
         return CustomList(copy)
 
     def __sub__(self, other: list):
         copy, other = CustomList.one_size(self.copy(), other.copy())
-        for i in range(len(copy)):
-            copy[i] -= other[i]
+        for i, elem in enumerate(other):
+            copy[i] -= elem
         return CustomList(copy)
 
     def __radd__(self, other: list):
         copy, other = CustomList.one_size(self.copy(), other.copy())
-        for i in range(len(copy)):
-            copy[i] += other[i]
+        for i, elem in enumerate(other):
+            copy[i] += elem
         return CustomList(copy)
 
     def __iadd__(self, other: list):
@@ -36,8 +36,8 @@ class CustomList(list):
 
     def __rsub__(self, other: list):
         copy, other = CustomList.one_size(self.copy(), other.copy())
-        for i in range(len(copy)):
-            other[i] -= copy[i]
+        for i, elem in enumerate(copy):
+            other[i] -= elem
         return CustomList(other)
 
     def __isub__(self, other: list):
@@ -60,3 +60,6 @@ class CustomList(list):
 
     def __ge__(self, other):
         return sum(self) >= sum(other)
+
+
+# прогоните код через pylint (кроме докстрингов)
