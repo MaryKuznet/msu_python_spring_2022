@@ -60,6 +60,3 @@ class CustomList(list):
 
     def __ge__(self, other):
         return sum(self) >= sum(other)
-
-
-# прогоните код через pylint (кроме докстрингов)
