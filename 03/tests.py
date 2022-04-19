@@ -13,6 +13,7 @@ class TestCustomList(unittest.TestCase):
 
     # Поэлементное сравнение списков
     def comparison(self, list1, list2):
+        self.assertEqual(len(list1), len(list2))
         for elem1, elem2 in zip(list1, list2):
             self.assertEqual(elem1, elem2)
 
