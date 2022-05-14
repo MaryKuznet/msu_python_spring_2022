@@ -17,8 +17,10 @@ class LRUCache:
         return self.cache[key]
 
     def set(self, key, value):
+        if key in self.cache:
+            self.priority.remove(key)
         self.cache[key] = value
         self.priority.append(key)
-        if len(self.cache) > self.limit:
+        if len(self.priority) > self.limit:
             self.cache.pop(self.priority[0])
             self.priority.pop(0)
