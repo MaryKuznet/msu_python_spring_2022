@@ -34,7 +34,7 @@ class TestCustomMeta(unittest.TestCase):
         # Тест нового атрибута
         inst_1.dynamic = "added later"
         inst_2.dynamic = "added later"
-        self.assertEqual(inst_1.custom_dynamic,"added later")
+        self.assertEqual(inst_1.custom_dynamic, "added later")
         self.assertEqual(inst_2.custom_dynamic, "added later")
 
     # Проверяем, что атрибуты в старом виде вызывают ошибку
