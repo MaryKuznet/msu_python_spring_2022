@@ -59,6 +59,3 @@ class Data:
     num = Integer()
     name = String()
     price = PositiveInteger()
-
-    def __init__(self):
-        pass
