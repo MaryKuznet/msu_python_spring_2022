@@ -31,6 +31,12 @@ class TestCustomMeta(unittest.TestCase):
         self.assertEqual(inst_1.custom_val, 99)
         self.assertEqual(inst_2.custom_val, 2)
 
+        # Тест нового атрибута
+        inst_1.dynamic = "added later"
+        inst_2.dynamic = "added later"
+        self.assertEqual(inst_1.custom_dynamic,"added later")
+        self.assertEqual(inst_2.custom_dynamic, "added later")
+
     # Проверяем, что атрибуты в старом виде вызывают ошибку
     def test_old_attributes(self):
         inst_1 = CustomClass()
@@ -50,6 +56,16 @@ class TestCustomMeta(unittest.TestCase):
 
         with self.assertRaises(AttributeError):
             CustomClass.x
+
+        # Тест нового атрибута
+        inst_1.dynamic = "added later"
+        inst_2.dynamic = "added later"
+
+        with self.assertRaises(AttributeError):
+            inst_1.dynamic
+
+        with self.assertRaises(AttributeError):
+            inst_2.dynamic
 
 
 if __name__ == '__main__':
