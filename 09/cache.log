@@ -1,0 +1,10 @@
+2022-05-23 23:41:54,843	INFO	Add key-value
+2022-05-23 23:41:54,844	INFO	Add key-value
+2022-05-23 23:41:54,844	INFO	Get value
+2022-05-23 23:41:54,844	INFO	Get value
+2022-05-23 23:41:54,844	WARNING	Request for a non-existent hatch
+2022-05-23 23:41:54,844	INFO	Add key-value
+2022-05-23 23:41:54,844	INFO	Limit exceeded, one item removed
+2022-05-23 23:41:54,844	WARNING	Request for a non-existent hatch
+2022-05-23 23:41:54,844	INFO	Add key-value
+2022-05-23 23:41:54,844	INFO	Changing the value for an existing key
